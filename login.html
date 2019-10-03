@@ -8,7 +8,10 @@
 <body>
 	<div ng-app="appLogin" ng-controller="loginCtrl">
 		<h1>{{user}}</h1>
-		<button ng-click="GetAllUsers()">Prueba</button>
+		<h1>{{usuario.apellido}}</h1>
+		<input type="text" ng-model="tbusuario">
+		<input type="text" ng-model="tbpass">
+		<button ng-click="ValidarUsuario(tbusuario, tbpass)">Prueba</button>
 	</div>
 
 <script src="Login/ModelLogin.js"></script>

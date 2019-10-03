@@ -16,4 +16,14 @@ app.service("servicioLogin", function ($http){
         return response;
     }
     
+
+      // buscar Usuario
+    this.Logear = function (user, pass) {
+        var response = $http({
+            method: "GET",
+            url: "http://www.depiff.com/api_clio/usuarios/read_one.php?username="+user+"&pass="+pass
+        });
+        return response;
+    }
+
 });
