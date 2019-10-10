@@ -7,8 +7,7 @@
 <!--<script type="text/javascript" src="Resources/angular.min"></script>-->
 <body>
 	<div ng-app="appLogin" ng-controller="loginCtrl">
-		<h1>{{user}}</h1>
-		<h1>{{usuario.apellido}}</h1>
+		<h1>{{usr.apellido}}</h1>
 		<input type="text" ng-model="tbusuario">
 		<input type="text" ng-model="tbpass">
 		<button ng-click="ValidarUsuario(tbusuario, tbpass)">Prueba</button>
@@ -17,6 +16,8 @@
 <script src="Login/ModelLogin.js"></script>
 <script src="Login/servicioLogin.js"></script>
 <script src="Login/ControladorLogin.js"></script>
+<script src="Login/FacDatos.js"></script>
+
 
 
 </body>

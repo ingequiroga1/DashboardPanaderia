@@ -1,7 +1,5 @@
 
-app.controller('loginCtrl', function($scope, servicioLogin) {
-	 //GetAllUsers();
-     $scope.user = "vquiroga";
+app2.controller('loginCtrl', function($scope, servicioLogin,usuari) {
 
 
         //To Get All Records 
@@ -16,12 +14,13 @@ app.controller('loginCtrl', function($scope, servicioLogin) {
     }
 
 
-
     $scope.ValidarUsuario = function (user,pass) {
         debugger;
         var getData = servicioLogin.Logear(user, pass);
         getData.then(function (usuario) {
-            $scope.usuario = usuario.data;
+            usuari.setdatusuario(usuario.data);
+            $scope.usr = usuari.getdatusuario();
+            window.location.href = "index.html";
         },function () {
             alert('Error in getting records');
         });
