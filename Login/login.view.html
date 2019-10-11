@@ -1,7 +1,17 @@
 <div>
 	<div ng-app="appLogin">
-		<input type="text" ng-model="vm.username">
-		<input type="text" ng-model="vm.password">
-		<button ng-click="ValidarUsuario(tbusuario, tbpass)">Prueba</button>
+		<h1>Bienvenido</h1>
+		<div>
+			<form name="form" ng-submit="vm.login()">
+				<label for="username">Username</label>
+				<input name="username" type="text" ng-model="vm.username">
+				<label for="password">Password</label>
+				<input type="text" name="password" ng-model="vm.password">
+				<button type="submit" class="btn btn-primary">Login</button>
+				<a href="#!/register" class="btn btn-link">Registrarse</a>
+
+			</form>
+			
+		</div>		
 	</div>	
 </div>

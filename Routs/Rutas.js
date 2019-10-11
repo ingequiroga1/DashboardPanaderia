@@ -22,6 +22,12 @@
                 controllerAs: 'vm'
             })
 
+          .when('/register', {
+               controller: 'RegisterController',
+               templateUrl: 'register/register.view.html',
+               controllerAs: 'vm'
+          })
+
           .otherwise({ redirectTo: '/login' });
       }
 
@@ -36,7 +42,7 @@
         $rootScope.$on('$locationChangeStart', function(event, next, current) {
 
           debugger;
-          var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
+          var restrictedPage = $.inArray($location.path(), ['/login','/register']) === -1;
           var loggedIn = $rootScope.globals.currentUser;
           if(restrictedPage && !loggedIn) {
             $location.path('/login');
